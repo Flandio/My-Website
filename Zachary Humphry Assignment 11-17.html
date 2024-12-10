@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Zach's Library</title>
+<style>
+#myHeader {
+	background-color: lightblue;
+	color: black;
+	padding: 40px;
+	text-align: center;
+}
+
+#myHeaderHeader {
+	background-color: orange;
+	color: black;
+	padding: 40px;
+	text-align: center;
+}
+
+#contact-footer {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-top: 2px solid #333;
+    margin-top: 30px;
+    text-align: center;
+}
+
+#review-section {
+    background-color: #f8f8f8;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin: 20px 0;
+}
+
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: transform 0.3s;
+}
+
+#back-to-top:hover {
+    transform: scale(1.1);
+    background-color: #555;
+}
+body {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+h1 {
+    text-align: center;
+    position: relative;
+    padding-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+h1::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    background-color: black;
+}
+h2{text-align: center;}
+h3{text-align: center;}
+h4{text-align: center;}
+.center-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.left-image {
+    display: block;
+    margin-right: auto;
+}
+.image-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+.side-by-side-image {
+    width: 45%;
+    height: auto;
+    max-width: 400px;
+}
+
+body {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+    background: linear-gradient(to right, black 0%, black 20%, white 20%, white 80%, black 80%, black 100%);
+}
+.content {
+    background-color: white;
+    padding: 20px;
+}
+
+.sauron-text {
+    color: #FF0000;
+	
+}
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    margin-bottom: 20px;
+}
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid black;
+	
+}
+
+
+.collapsed-table {
+    width: 100%; /* Full width or adjust as needed */
+    border-collapse: collapse;
+    margin: 20px auto; /* Center-align the table */
+    font-size: 0.9em; /* Small font size */
+    text-align: center;
+}
+
+.collapsed-table th, .collapsed-table td {
+    border: 1px solid #333; /* Collapsed border */
+    padding: 8px; /* Padding within cells */
+}
+
+.collapsed-table th {
+    background-color: #ddd; /* Light background for headers */
+    font-weight: bold;
+}
+
+.collapsed-table {
+    width: 100%; /* Full width or adjust as needed */
+    border-collapse: collapse;
+    margin: 20px auto; /* Center-align the table */
+    font-size: 0.9em; /* Small font size */
+    text-align: center;
+}
+
+.collapsed-table th, .collapsed-table td {
+    border: 1px solid #333; /* Collapsed border */
+    padding: 8px; /* Padding within cells */
+}
+
+.collapsed-table th {
+    background-color: #ddd; /* Light background for headers */
+    font-weight: bold;
+}
+
+#favorite-character-section {
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-top: 2px solid #333;
+    margin-top: 20px;
+    text-align: center;
+}
+#favorite-character-section h2 {
+    margin-bottom: 15px;
+}
+#favorite-character-section form {
+    display: inline-block;
+    text-align: left;
+    max-width: 400px;
+}
+#favorite-character-section select, 
+#favorite-character-section textarea, 
+#favorite-character-section input[type="submit"] {
+    width: 100%;
+    padding: 8px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+.audio-container {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 30px auto;
+    max-width: 600px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.audio-container h3 {
+    margin-top: 0;
+    color: #333;
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+.audio-player {
+    width: 100%;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.audio-description {
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 10px;
+    text-align: center;
+    font-style: italic;
+}
+
+.local-video-container {
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 30px auto;
+    max-width: 700px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.local-video {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.video-title {
+    font-size: 1.2em;
+    color: #333;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.video-description {
+    font-size: 0.9em;
+    color: #666;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+</style>
+</head>
+<body>
+
+<h1 id="myHeader"><i>Zach's Library</i></h1>
+
+<main>
+
+<h3> 
+
+<a href="https://youtu.be/QLvvkTbHjHI">What is this?</a>
+</h3>
+<p> This site is dedicated to me, <a href="https://www.linkedin.com/in/zhumphry">Zach</a>, where I'll be talking, rambling, and reviewing things that have emotionally impacted me. I'll cover a wide range of topics, including movies, video games, TV shows, and even books. This is my outlet to express my feelings about both my favorite and most hated series. While this site isn't targeted at any specific audience, you, the reader, are absolutely welcome here!</p>
+<img src="https://www.animationconnection.com/assets/artwork/1499264744-167-4608-homer-and-bart-simpson-wave.jpg" alt="HomerWave" width="250" height="250" class="left-image">
+<br>
+<section>
+
+<h2 id="myHeaderHeader"> First Review!</h2>
+
+
+<div class="audio-container">
+    <h3>Listen to this LOTR inspired track while reading</h3>
+    <audio id="lotr-ost" class="audio-player" controls autoplay>
+        <source src="file:///C:/Users/Zach/Desktop/LOTR.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+   
+</div>
+
+
+<h4>
+
+<a href="https://www.youtube.com/watch?v=c9fsBy45YTQ">Lord of the Rings, The Rings of Power, Season 2, Episode 2</a>
+
+</h4>
+
+<img src="https://economictimes.indiatimes.com/thumb/msid-111323004,width-1200,height-900,resizemode-4,imgsize-133852/the-lord-of-the-rings-the-rings-of-power-season-2-episode-schedule-revealed.jpg?from=mdr" alt="RingsOfPowerCharacters" width="400" height="300" class="center-image">
+
+<div class="video-container">
+        <iframe src="https://www.youtube.com/embed/TCwmXY_f-e0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+<p>A few days ago, while watching television with my father, he decided to continue his watch-through of a controversial prequel to the critically acclaimed movie series. As a fan of the original films and the books, jumping straight into this episode was quite jarring. So many different characters I had heard of before, along with familiar ones in completely new settings. Overall, I enjoyed the interactions between Sauron and Celebrimbor, as well as the meeting with <a href="https://www.youtube.com/watch?v=Pyy_FIYE7EE">Durin II.</a>
+
+<h2> Episodes Ranked by IMDB</h2>
+
+<ol>
+	<li>Doomed to Die
+	<li>Sword and Flame
+	<li>Halls of Stone
+	<li>Elven Kings Under the Sky
+	<li>Where the Stars are Strange
+	<li>Where Is He?
+	<li>Eldest
+	<li>The Eagle and the Sceptre
+
+</ol>
+
+<div class="local-video-container">
+    <h3 class="video-title">DurinIV vs a Balrog</h3>
+    <video class="local-video" controls>
+        <source src="file:///C:/Users/Zach/Desktop/BVD.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <p class="video-description">Durin's Bain..</p>
+</div>
+
+<div class="audio-container">
+    <h3>Song of Durin, one of Tolkien's Poems</h3>
+    <audio id="song-of-durin" class="audio-player" controls preload="auto">
+        <source src="file:///C:/Users/Zach/Desktop/Durin.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+  
+</div>
+
+<div class="image-container">
+    <img src="https://static1.colliderimages.com/wordpress/wp-content/uploads/2024/08/the-rings-of-power-season-2-ciaran-hinds-dark-wizard.jpg" alt="EvilWizard" class="side-by-side-image">
+    <img src="https://i0.wp.com/www.thewrap.com/wp-content/uploads/2024/08/the-lord-of-the-rings-rings-of-power-charlie-vickers-annatar.jpg?fit=990%2C557&ssl=1" alt="Sauron" class="side-by-side-image">
+</div>
+
+<h2> List of Main Characters in this Season</h2>
+
+<ul style="list-style-type: none; text-align: center;">
+	<li>Galadriel</li>
+	<li>Sauron</li>
+	<li> Durin IV</li>
+	<li>Elrond</li>
+	<li>The Stranger (Gandalf)</li>
+	<li>Celebrimbor</li>
+
+</ul>
+
+<table class="collapsed-table">
+    <tr>
+        <th>Character</th>
+        <th>Actor</th>
+        <th>Role</th>
+    </tr>
+    <tr>
+        <td>Galadriel</td>
+        <td>Morfaeth Clark</td>
+        <td>Elven Warrior</td>
+    </tr>
+    <tr>
+        <td>Sauron</td>
+        <td>Charlie Vickers</td>
+        <td>Dark Lord</td>
+    </tr>
+    <tr>
+        <td>Durin IV</td>
+        <td>Owain Arthur</td>
+        <td>Dwarven Prince</td>
+    </tr>
+    <tr>
+        <td>Elrond</td>
+        <td>Robert Aramayo</td>
+        <td>Elven Scholar</td>
+    </tr>
+    <tr>
+        <td>The Stranger (Gandalf)</td>
+        <td>Daniel Weyman</td>
+        <td>Wandering Wizard</td>
+    </tr>
+    <tr>
+        <td>Celebrimbor</td>
+        <td>Charles Edwards</td>
+        <td>Elven Smith</td>
+    </tr>
+</table>
+
+<div class="local-video-container">
+    <h3 class="video-title">Gandalf's Name</h3>
+    <video class="local-video" controls>
+        <source src="file:///C:/Users/Zach/Desktop/gandalf.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <p class="video-description">Watch Gandalf's name origin!</p>
+</div>
+
+<h2>A Table of the Locations their Peoples in the Show</h2>
+
+<table class="collapsed-table">
+    <tr>
+        <th>Location</th>
+        <th>Description</th>
+        <th>Notable Inhabitants</th>
+    </tr>
+    <tr>
+        <td>Rivendell</td>
+        <td>An Elven refuge hidden in the mountains, known for its beauty and wisdom.</td>
+        <td>Elrond, Arwen</td>
+    </tr>
+    <tr>
+        <td>Minas Tirith</td>
+        <td>The fortified city of Gondor, known for its white stone walls and towers.</td>
+        <td>Aragorn, Boromir</td>
+    </tr>
+    <tr>
+        <td>Shire</td>
+        <td>A peaceful and idyllic region inhabited by hobbits.</td>
+        <td>Frodo, Samwise, Bilbo</td>
+    </tr>
+    <tr>
+        <td>Mordor</td>
+        <td>A dark, volcanic region dominated by Mount Doom, home to Sauron.</td>
+        <td>Sauron, Orcs</td>
+	</tr>	
+	<tr>
+	 <td>Numenor</td>
+        <td>An island kingdom of Men, known for its advanced culture and seafaring prowess. It was gifted to the faithful followers of the Valar.</td>
+        <td>Elendil, Tar-Miriel, Pharazôn</td>	
+		
+    </tr>
+</table>
+
+
+</section>
+
+<br>
+
+<section id="favorite-character-section">
+    <h2>Who Was Your Favorite Character from the Show?</h2>
+    <form action="#" method="post">
+        <label for="character">Select your favorite character!</label>
+        <select id="character" name="character">
+            <option value="galadriel">Galadriel</option>
+            <option value="sauron">Sauron</option>
+            <option value="durin">Durin IV</option>
+            <option value="elrond">Elrond</option>
+            <option value="gandalf">The Stranger (Gandalf)</option>
+            <option value="celebrimbor">Celebrimbor</option>
+			 <option value="other">Other (Put down below)</option>
+        </select>
+        <br><br>
+        <label for="reason">What drew you to like this character?</label><br>
+        <textarea id="reason" name="reason" rows="4" cols="50" placeholder="Share your thoughts..."></textarea>
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+</section>
+
+<section>
+<h2> Thank you!</h2>
+<p> Although that review is not complete and is extremely abbreviated, I hope it gives you a taste of what is to come. Many of the upcoming reviews will be much more detailed and well-researched. I still want to be factually correct, even in a closed environment such as this. </p>
+Thank you for reading!</p>
+<img src="https://i.pinimg.com/736x/22/cc/7b/22cc7bc97f2ac6e33a8607ab0daa0537.jpg" alt="HappySponge" width="200" height="200" class="left-image">
+</section>
+
+<a href="#" id="back-to-top">↑</a>
+<footer id="contact-footer">
+
+<p> 
+<a href="https://www.linkedin.com/in/zhumphry">*Author Zachary Humphry</a>
+
+</p>
+<p>
+
+<a href="mailto:zhumphry21@gmail.com">zhumphry21@gmail</a>
+
+</p>
+</footer>
+
+</body>
+</html>
